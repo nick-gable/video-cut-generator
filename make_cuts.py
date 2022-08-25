@@ -11,7 +11,7 @@ def make_cut(output_path: str, movie_path: str, start: float, end: float):
     # stream = ffmpeg.trim(stream, start=start, end=end)
     # stream = ffmpeg.output(stream, output_path)
     # ffmpeg.run(stream)
-    os.system(f"ffmpeg -i {movie_path} -ss {start} -to {end} {output_path}")
+    os.system(f'ffmpeg -i "{movie_path}" -ss {start} -to {end} "{output_path}"')
 
 
 if __name__ == "__main__":
