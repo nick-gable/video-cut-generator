@@ -4,6 +4,8 @@
 
 `opencv-python` is used in `generate_cuts` to display movies.
 
+`ffmpeg` is used in `make_cuts` and `splice` for cutting out segments of the movies, and for splicing them together. `ffmpeg` is called directly from the system shell, so make sure that you either have it in your PATH or have the executable in the same directory as the Python scripts.
+
 Make sure that `files.py` is in the same folder when scripts are ran, since it is referenced by the other modules.
 
 ## generate_cuts
