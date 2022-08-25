@@ -36,3 +36,16 @@ def write_cuts(dir: str, cuts):
             file, fieldnames=["clip_id", "movie_id", "start_sec", "end_sec"])
         writer.writeheader()
         writer.writerows(cuts)
+
+
+def read_cuts(dir: str):
+    """Reads cuts.csv in provided working directory
+
+    Returns list of dictionaries containing cut information"""
+    path = os.path.join(dir, 'cuts.csv')
+    result = []
+    with open(path) as file:
+        reader = csv.DictReader(file)
+        for row in reader:
+            result.append(row)
+    return result
